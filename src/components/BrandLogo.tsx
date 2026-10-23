@@ -100,10 +100,10 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
           </defs>
         </svg>
 
-        {/* Small Traditional Red Cinnabar Seal "赤" */}
+        {/* Small Traditional Red Cinnabar Seal "華" */}
         {showSeal && size !== 'sm' && (
           <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#c22b22] text-[#f6f4f0] rounded-[2px] border border-[#d49b55]/50 flex items-center justify-center text-[9px] font-oriental font-bold shadow-sm">
-            赤
+            華
           </div>
         )}
       </div>
@@ -114,7 +114,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
           <span
             className={`font-oriental font-bold text-[#f5f1ea] tracking-wider leading-none ${textSizes[size]}`}
           >
-            赤霄<span className="text-[#d49b55] mx-1">·</span>椒宴
+            華神椒宴
           </span>
           {showSeal && (
             <span className="hidden sm:inline-block border border-[#c22b22] text-[#e13b2e] bg-[#c22b22]/10 px-1 py-0.2 text-[10px] font-oriental tracking-widest rounded-xs scale-90">
@@ -125,9 +125,9 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
         {showSubtitle && (
           <span
-            className={`font-latin-display text-[#a89f91] uppercase mt-0.5 ${subtextSizes[size]}`}
+            className={`font-latin-display text-[#d49b55] font-semibold mt-0.5 tracking-[0.25em] ${subtextSizes[size]}`}
           >
-            CHIXIAO · SICHUAN FLAME & SPICE
+            HUASHEN
           </span>
         )}
       </div>

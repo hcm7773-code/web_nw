@@ -3,8 +3,6 @@ import {
   Calendar,
   Clock,
   Users,
-  MapPin,
-  Phone,
   CheckCircle2,
   Sparkles,
   ShoppingBag,
@@ -40,15 +38,15 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
   const seatingTypes = [
     {
       id: 'hall',
-      title: '「赤霄水榭」大廳散席',
-      suitable: '1 - 4 人 · 熱鬧煙火氣',
-      desc: '石臼流水竹影環繞，桌距1.8米舒適寬敞，適合朋友小聚、日常打卡。',
+      title: '「凝香雅緻」獨立雅座',
+      suitable: '1 - 4 人 · 冷麻凝香氛圍',
+      desc: '靜謐空間，感受冷麻的火鍋凝香，桌距1.8米舒適寬敞，適合朋友小聚、日常打卡。',
     },
     {
       id: 'window',
       title: '「椒蘭香榭」臨窗景觀雅座',
-      suitable: '4 - 6 人 · 信義夜景天際線',
-      desc: '高樓俯瞰璀璨夜色，高背沙發半包廂隔屏，適合情侶約會與家庭團聚。',
+      suitable: '4 - 6 人 · 市區靜巷夜景天際線',
+      desc: '靜謐璀璨夜色，高背沙發半包廂隔屏，適合情侶約會與家庭團聚。',
     },
     {
       id: 'vip',
@@ -61,19 +59,19 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
   const faqs = [
     {
       q: '現場有提供不辣的鍋底嗎？不吃牛油可以吃水煮魚嗎？',
-      a: '有的！我們備有雲南野生羊肚菌熬製之「黑羽烏骨雞金湯鍋」，亦可點選清香清甜之「山泉鱸魚藤椒水煮（可調為免辣清蒸藤椒風味）」。火鍋亦備有純茶油熬煮的無牛油高湯。',
+      a: '有的！我們備有雲南野生羊肚菌熬製之「古法酸菜魚金湯鍋」，亦可點選清香清甜之「山泉鱸魚藤椒水煮（可調為免辣清蒸藤椒風味）」。火鍋亦備有純茶油熬煮的無牛油高湯。',
     },
     {
       q: '線上訂位需要支付訂金嗎？包廂有低消限制嗎？',
-      a: '大廳散席與臨窗景觀席免付訂金；「丹霞九霄獨立包廂」平日晚間低消為 NT$ 12,000，假日為 NT$ 16,000，線上送出後將由專屬侍餐經理於24小時內致電確認菜單與訂金。',
+      a: '獨立雅座與臨窗景觀席免付訂金；「丹霞九霄獨立包廂」平日晚間低消為 NT$ 12,000，假日為 NT$ 16,000，線上送出後將由專屬侍餐經理於24小時內致電確認菜單與訂金。',
     },
     {
       q: '外帶點餐水煮魚會影響口感嗎？如何回溫加熱？',
-      a: '不會！赤霄外帶採用專利「雙重鋁箔恆溫密封提袋」，60分鐘內保持在70°C以上。包裝內附主廚復熱指南：微波或小火慢煨至邊緣冒泡即可關火，魚肉依舊滑嫩多汁。',
+      a: '不會！華神外帶採用專利「雙重鋁箔恆溫密封提袋」，60分鐘內保持在70°C以上。包裝內附主廚復熱指南：微波或小火慢煨至邊緣冒泡即可關火，魚肉依舊滑嫩多汁。',
     },
     {
       q: '門市有配合停車優惠與代客泊車服務嗎？',
-      a: '旗艦信義店消費滿 NT$ 1,500 即享 Breeze Center 停車折抵 1 小時（每車最高折抵 4 小時）；晚間 17:30 起一樓備有專屬代客泊車服務。',
+      a: '市區靜巷旗艦店不提供泊車服務。',
     },
   ];
 
@@ -98,7 +96,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
           預約與鑑賞 · 席位與外帶整合
         </h1>
         <p className="text-xs sm:text-sm text-[#9d9385] max-w-xl mx-auto leading-relaxed">
-          線上即刻尊榮留席，提前指定沸騰水煮魚與九宮格老火鍋；或選擇專人外帶外送，將赤霄川魂帶回家中。
+          線上即刻尊榮留席，提前指定沸騰水煮魚與麻辣老火鍋；或選擇專人外帶外送，將華神椒宴極致饗宴帶回家中。
         </p>
       </section>
 
@@ -141,7 +139,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
               <div className="max-w-lg mx-auto p-6 rounded-xl bg-gradient-to-b from-[#1c1917] to-[#121110] border border-[#d49b55]/40 text-left space-y-4 shadow-xl">
                 <div className="flex items-center justify-between border-b border-[#2d2825] pb-3">
                   <span className="font-oriental text-sm font-bold text-[#f5f1ea]">
-                    赤霄·椒宴 席位尊榮憑證
+                    華神椒宴 HUASHEN 席位尊榮憑證
                   </span>
                   <span className="font-mono text-xs font-bold text-[#d49b55]">
                     {reservationState.bookingCode}
@@ -332,17 +330,17 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
                     className="w-full px-3 py-2.5 bg-[#1b1816] border border-[#352f2b] rounded text-xs text-[#f5f1ea] focus:border-[#c22b22] outline-none"
                   >
                     <option value="">到店現場點餐</option>
-                    <option value="漢源貢椒沸騰現片黑魚 (NT$ 1,280)">
+                    <option value="漢源貢椒沸騰現片黑魚 (NT$ 1,880)">
                       漢源貢椒沸騰現片黑魚（鮮活現片）
                     </option>
                     <option value="山泉鱸魚藤椒青花椒水煮 (NT$ 1,380)">
                       山泉鱸魚藤椒青花椒水煮（清亮鮮麻）
                     </option>
-                    <option value="重慶百年古法九宮格老茶油鍋 (NT$ 780)">
-                      重慶百年古法九宮格牛油老火鍋
+                    <option value="重慶百年古法老茶油鍋 (NT$ 1,280)">
+                      重慶百年古法牛油老火鍋
                     </option>
                     <option value="水火共濟太極鴛鴦雙拼鍋 (NT$ 880)">
-                      水火共濟鴛鴦鍋（九宮格麻辣 + 烏骨雞金湯）
+                      水火共濟鴛鴦鍋（麻辣老火鍋 + 古法酸菜魚金湯）
                     </option>
                     <option value="雙人椒香沸騰經典饗宴 (NT$ 2,380)">
                       雙人椒香沸騰經典饗宴（套餐）
@@ -363,7 +361,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
                     <option value="椒香微辣">微辣微麻（香醇清爽，初嘗首選）</option>
                     <option value="正宗巴蜀">正宗巴蜀標準辣麻（主廚推薦黃金比例）</option>
                     <option value="重辣重麻">重辣重麻（嗜辣饕客，熱油爆香）</option>
-                    <option value="完全免辣（清湯或酸菜湯）">完全免辣（野蕈烏骨雞清湯）</option>
+                    <option value="完全免辣（清湯或酸菜湯）">完全免辣（野蕈古法酸菜魚金湯）</option>
                   </select>
                 </div>
               </div>
@@ -480,7 +478,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
               隨袋附贈 · 主廚復熱風味手冊
             </h4>
             <p className="text-xs text-[#9d9385] leading-relaxed">
-              隨餐附贈特製蒜泥香油碟與復熱說明，微波或鍋煮皆能100%還原店內九宮格與水煮魚之精純神韻。
+              隨餐附贈特製蒜泥香油碟與復熱說明，微波或鍋煮皆能100%還原店內老火鍋與水煮魚之精純神韻。
             </p>
           </div>
         </div>
@@ -535,7 +533,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
             門市據點 · 禮賓尊享與常見問題
           </h2>
           <p className="text-xs sm:text-sm text-[#9d9385] max-w-2xl mx-auto">
-            雙旗艦門市座落台北精華核心，沉浸體驗當代東方火光美學空間
+            雙旗艦門市座落台北精華核心，沉浸體驗當代東方極致美學空間
           </p>
         </div>
 
@@ -545,34 +543,26 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
           <div className="p-6 sm:p-8 rounded-xl bg-[#141211] border border-[#2b2623] space-y-5">
             <div className="flex items-center justify-between">
               <span className="text-xs font-mono text-[#c22b22]">FLAGSHIP STORE</span>
-              <span className="text-xs text-[#d49b55] font-oriental">信義繁華夜景</span>
+              <span className="text-xs text-[#d49b55] font-oriental">市區靜巷雅緻夜景</span>
             </div>
             <div>
               <h3 className="font-oriental text-2xl font-bold text-[#f5f1ea]">
-                赤霄·椒宴 旗艦信義店
+                華神椒宴 市區靜巷旗艦店
               </h3>
               <p className="text-xs text-[#9d9385] mt-1">
-                Breeze Center 微風信義 12 樓 · 俯瞰 101 與台北天際線
+                景觀雅席 · 近觀璀璨台北夜景
               </p>
             </div>
 
             <div className="space-y-2 text-xs text-[#c8c1b5] border-t border-b border-[#252220] py-4">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#d49b55] shrink-0 mt-0.5" />
-                <span>台北市信義區松仁路 100 號 12 樓（捷運市政府站 3 號出口）</span>
-              </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-[#d49b55] shrink-0" />
-                <span>每日 11:30 - 02:00（供餐至 01:00）</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#d49b55] shrink-0" />
-                <span>訂位禮賓專線：02-2723-8899</span>
+                <span>營業時間：每日 11:30 - 02:00（供餐至 01:00）</span>
               </div>
             </div>
 
             <div className="flex items-center justify-between text-xs text-[#8c8273]">
-              <span>設有 4 間私人包廂 · 專屬代客泊車</span>
+              <span>設有靜謐空間雅座 · 專屬侍餐茶席</span>
               <button
                 onClick={() => {
                   window.scrollTo({ top: 300, behavior: 'smooth' });
@@ -588,34 +578,26 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
           <div className="p-6 sm:p-8 rounded-xl bg-[#141211] border border-[#2b2623] space-y-5">
             <div className="flex items-center justify-between">
               <span className="text-xs font-mono text-[#d49b55]">CONCEPT STORE</span>
-              <span className="text-xs text-[#d49b55] font-oriental">庭園禪意水榭</span>
+              <span className="text-xs text-[#d49b55] font-oriental">靜巷私密廚房</span>
             </div>
             <div>
               <h3 className="font-oriental text-2xl font-bold text-[#f5f1ea]">
-                赤霄·椒宴 概念大安店
+                華神椒宴 概念西門店
               </h3>
               <p className="text-xs text-[#9d9385] mt-1">
-                敦化南路林蔭隱密巷弄 · 私宅庭院獨立水榭包廂
+                西門幽靜隱密巷弄 · 私密廚房獨立水榭包廂
               </p>
             </div>
 
             <div className="space-y-2 text-xs text-[#c8c1b5] border-t border-b border-[#252220] py-4">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#d49b55] shrink-0 mt-0.5" />
-                <span>台北市大安區敦化南路一段 288 號（捷運忠孝敦化站 6 號出口）</span>
-              </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-[#d49b55] shrink-0" />
-                <span>每日 12:00 - 01:00（供餐至 00:00）</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#d49b55] shrink-0" />
-                <span>訂位禮賓專線：02-2775-6688</span>
+                <span>營業時間：每日 12:00 - 01:00（供餐至 00:00）</span>
               </div>
             </div>
 
             <div className="flex items-center justify-between text-xs text-[#8c8273]">
-              <span>庭院景觀 · 私密品茗雅座</span>
+              <span>靜巷景觀 · 私密品茗雅座</span>
               <button
                 onClick={() => {
                   window.scrollTo({ top: 300, behavior: 'smooth' });
@@ -633,10 +615,10 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
           <div className="space-y-2 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#c22b22]/20 border border-[#c22b22]/40 rounded text-xs text-[#e13b2e] font-oriental">
               <Award className="w-3.5 h-3.5" />
-              <span>赤霄椒友會 · VIP 會員尊榮禮遇</span>
+              <span>華神椒友會 · VIP 會員尊榮禮遇</span>
             </div>
             <h3 className="font-oriental text-2xl font-bold text-[#f5f1ea]">
-              入會即贈「手炒黑糖冰粉券」，生日當月享「漢源水煮魚」免費升級
+              入會即贈「手炒黑糖豆花券」，生日當月享「漢源水煮魚」免費升級
             </h3>
             <p className="text-xs text-[#9d9385] max-w-xl">
               消費每滿 1,000 元累積 1 點，點數可兌換頂級 A5 和牛大盛與專屬訂造紫銅小鍋。

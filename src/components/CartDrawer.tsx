@@ -124,7 +124,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 </div>
 
                 <p className="text-[11px] text-[#807669] leading-relaxed">
-                  ※ 內附雙重保溫鎖鮮提袋與老茶油鍋底回溫說明卡。如需修改餐點請致電門市：02-2723-8899。
+                  ※ 內附雙重保溫鎖鮮提袋與老茶油鍋底回溫說明卡。如需修改餐點請透過線上訂單系統或現場告知侍餐人員。
                 </p>
 
                 <button
@@ -166,7 +166,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                         : 'text-[#8c8273] hover:text-[#f5f1ea]'
                     }`}
                   >
-                    到店自取 (信義旗艦店)
+                    到店自取 (市區靜巷旗艦店)
                   </button>
                   <button
                     type="button"
@@ -203,7 +203,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                     <label className="block text-xs text-[#aba193] mb-1">外送完整地址</label>
                     <input
                       type="text"
-                      placeholder="例：台北市信義區松仁路100號 12樓"
+                      placeholder="請輸入外送詳細地址（包含門牌與樓層）"
                       value={deliveryAddress}
                       onChange={(e) => setDeliveryAddress(e.target.value)}
                       className="w-full px-3 py-2 bg-[#1b1816] border border-[#352f2b] rounded text-xs text-[#f5f1ea] focus:border-[#c22b22] outline-none"
@@ -248,7 +248,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                     className="accent-[#c22b22] rounded"
                   />
                   <label htmlFor="tableware" className="text-xs text-[#9d9385]">
-                    需要赤霄原木環保筷與防燙隔熱紙碗
+                    需要華神原木環保筷與防燙隔熱紙碗
                   </label>
                 </div>
 
@@ -278,7 +278,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 <div>
                   <p className="font-oriental text-base text-[#d5cfc5]">您的點餐袋還是空的</p>
                   <p className="text-xs text-[#807669] mt-1">
-                    挑選招牌漢源水煮魚、九宮格老火鍋或頂級肉品吧
+                    挑選招牌漢源水煮魚、麻辣老火鍋或頂級肉品吧
                   </p>
                 </div>
                 <button

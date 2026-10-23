@@ -96,7 +96,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({
           GRAND CULINARY REPERTOIRE
         </span>
         <h1 className="font-oriental text-4xl sm:text-5xl font-bold text-[#f5f1ea] tracking-wider">
-          珍饈典藏 · 赤霄巴蜀菜單
+          珍饈典藏 · 華神巴蜀菜單
         </h1>
         <p className="text-xs sm:text-sm text-[#9d9385] max-w-xl mx-auto leading-relaxed">
           全品項遵循現代東方美學排版，標注辣麻指數、品鑑指南與外帶即時預訂。亦可於線上訂位時提前指定備料。
@@ -189,10 +189,10 @@ export const MenuPage: React.FC<MenuPageProps> = ({
           <div>
             <span className="text-xs font-mono text-[#d49b55]">MENU SECTION 01</span>
             <h2 className="font-oriental text-3xl font-bold text-[#f5f1ea] mt-1">
-              鎮店雙雄 · 漢源貢椒沸騰活魚與九宮格老火鍋
+              鎮店雙雄 · 漢源貢椒沸騰活魚與麻辣老火鍋
             </h2>
             <p className="text-xs text-[#9d9385] mt-1">
-              現撈烏魚黑魚、山泉鱸魚活片熱油現淋；百年老茶油配方重慶九宮格
+              現撈烏魚黑魚、山泉鱸魚活片熱油現淋；百年老茶油配方重慶老火鍋
             </p>
           </div>
           <button
@@ -541,7 +541,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({
           <div>
             <span className="text-xs font-mono text-[#d49b55]">MENU SECTION 02</span>
             <h2 className="font-oriental text-3xl font-bold text-[#f5f1ea] mt-1">
-              極品涮料 · 鹿兒島A5和牛與屠場空運鮮毛肚
+              極品涮料 · 日本A5和牛與冷鏈直運鮮毛肚
             </h2>
             <p className="text-xs text-[#9d9385] mt-1">
               七上八下8秒鮮脆、大刀現切吊龍與手工黑松露蝦滑
@@ -650,7 +650,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({
           <div>
             <span className="text-xs font-mono text-[#d49b55]">MENU SECTION 03</span>
             <h2 className="font-oriental text-3xl font-bold text-[#f5f1ea] mt-1">
-              解辣甘霖 · 古法黑糖手搓冰粉與花椒特釀
+              解辣甘霖 · 古法黑糖白玉豆花與特釀桂花酸梅湯
             </h2>
             <p className="text-xs text-[#9d9385] mt-1">
               生津化油、降火解麻，為熱辣川宴劃下甘醇句點
@@ -714,11 +714,11 @@ export const MenuPage: React.FC<MenuPageProps> = ({
             <div className="p-4 rounded-lg bg-[#181514] border border-[#24211f] space-y-1">
               <span className="text-[#c22b22] font-semibold block">重度麻舌感 (漢源青紅花椒)</span>
               <p className="text-[#8c8273]">
-                推薦搭配：<strong className="text-[#f5f1ea]">手炒黑糖醪糟白玉冰粉</strong>。假酸漿籽凝凍的多醣體能迅速包覆舌尖神經受體，降溫消麻。
+                推薦搭配：<strong className="text-[#f5f1ea]">手炒黑糖醪糟白玉豆花</strong>。滑嫩豆花搭配濃醇黑糖蜜能迅速包覆舌尖神經受體，降溫消麻。
               </p>
             </div>
             <div className="p-4 rounded-lg bg-[#181514] border border-[#24211f] space-y-1">
-              <span className="text-[#c22b22] font-semibold block">牛油油脂黏滯感 (九宮格老火鍋)</span>
+              <span className="text-[#c22b22] font-semibold block">牛油油脂黏滯感 (麻辣老火鍋)</span>
               <p className="text-[#8c8273]">
                 推薦搭配：<strong className="text-[#f5f1ea]">老樹煙燻桂花陳皮酸梅湯</strong>。天然有機酸分解油脂，生津止渴，讓腸胃毫無積滯負擔。
               </p>

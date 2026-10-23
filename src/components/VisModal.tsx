@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Copy, Check, Sparkles, Compass, Palette, Type, Layers } from 'lucide-react';
+import { X, Copy, Check, Sparkles, Compass, Palette, Type, Layers, Download } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 
 interface VisModalProps {
@@ -33,7 +33,7 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
       hex: '#D49B55',
       cmyk: 'C:20 M:45 Y:80 K:5',
       role: '東方雅緻輔色 · 老火鍋銅鼎與貢椒烘焙香',
-      description: '象徵百年九宮格純銅鼎器與四川漢源花椒低溫烘焙後的金黃油亮，散發內斂溫潤的貴族東方質地。',
+      description: '象徵百年純銅鼎器與四川漢源花椒低溫烘焙後的金黃油亮，散發內斂溫潤的貴族東方質地。',
       accent: 'border-l-4 border-[#D49B55]',
     },
     {
@@ -71,7 +71,7 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
             <span className="w-2.5 h-2.5 rounded-full bg-[#c22b22] animate-pulse" />
             <div>
               <h2 className="text-lg font-oriental font-bold tracking-wider text-[#f5f1ea]">
-                赤霄·椒宴 VIS 品牌視覺識別手冊
+                華神椒宴 HUASHEN VIS 品牌視覺識別手冊
               </h2>
               <p className="text-xs text-[#9d9385] font-latin-display">
                 VISUAL IDENTITY SYSTEM & BRAND DESIGN CONSTITUTION
@@ -144,7 +144,7 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
                     九宮同心圓 (Cauldron & Ring)
                   </h4>
                   <p className="text-xs text-[#aba193] leading-relaxed">
-                    外圍環飾取自重慶老茶油九宮格銅鼎，以古法鏤刻斷線排列，象徵鼎沸開席、各司其溫的火鍋圍坐情懷與圓融聚會。
+                    外圍環飾取自重慶老茶油銅鼎，以古法鏤刻斷線排列，象徵鼎沸開席、各司其溫的火鍋圍坐情懷與圓融聚會。
                   </p>
                 </div>
                 <div className="p-4 rounded-lg bg-[#181614] border border-[#2b2623]">
@@ -153,7 +153,7 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
                     硃砂私印 (Cinnabar Seal)
                   </h4>
                   <p className="text-xs text-[#aba193] leading-relaxed">
-                    右上角蓋印小篆「赤」字私章，如名廚簽名落款，宣告對於漢源貢椒與非遺老茶油配方不妥協之職人底氣。
+                    右下角蓋印小篆「華」字私章，如名廚簽名落款，宣告對於漢源貢椒與非遺老茶油配方不妥協之職人底氣。
                   </p>
                 </div>
               </div>
@@ -219,7 +219,7 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
                   PRIMARY DISPLAY FONT · 東方標題字型
                 </div>
                 <div className="font-oriental text-3xl font-bold text-[#f5f1ea] tracking-widest border-b border-[#2b2623] pb-3">
-                  沸騰川魂 · 赤焰入魂 · 鮮椒騰浪 · 九宮問鼎
+                  川蜀精髓 · 雙絕並立 · 鮮椒騰浪 · 九宮問鼎
                 </div>
                 <p className="text-xs text-[#9d9385]">
                   採用 <strong className="text-[#f5f1ea]">Noto Serif TC（思源宋體）</strong> 搭配金石刻書筆韻。橫細豎粗，橫筆收尖如刀，筆鋒剛勁而收斂，兼具大氣古韻與當代精準結構。
@@ -231,7 +231,7 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
                   LATIN ACCENT & NUMERALS · 西文與價格刻印
                 </div>
                 <div className="font-latin-display text-2xl font-bold tracking-widest text-[#d49b55] border-b border-[#2b2623] pb-3">
-                  CHIXIAO SICHUAN CUISINE · EST. 2026 · NT$ 1,280
+                  HUASHEN SICHUAN CUISINE · EST. 2026 · NT$ 1,880
                 </div>
                 <p className="text-xs text-[#9d9385]">
                   採用 <strong className="text-[#f5f1ea]">Cinzel Serif</strong>。源於古羅馬金石銘文的端正比例，結合清晰的等寬數值（Tabular Numerals），為菜單定價與品牌副標賦予低調奢華的權威感。
@@ -293,12 +293,12 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
                 {/* Application 3 */}
                 <div className="p-5 rounded-lg bg-[#181614] border border-[#2b2623] flex flex-col justify-between">
                   <div>
-                    <span className="text-[11px] font-mono text-[#d49b55]">APP 03 · 專屬鑄銅九宮格</span>
+                    <span className="text-[11px] font-mono text-[#d49b55]">APP 03 · 專屬鑄銅老火鍋</span>
                     <h4 className="font-oriental text-base text-[#f5f1ea] mt-1 mb-2">
                       手工敲花厚紫銅火鍋
                     </h4>
                     <p className="text-xs text-[#9d9385] leading-relaxed">
-                      由川西匠人手工捶打三千錘而成，純紫銅導熱均勻迅速，鼎身銘刻赤霄水波紋，九宮格格板可依涮煮食材厚薄自由升降。
+                      由川西匠人手工捶打三千錘而成，純紫銅導熱均勻迅速，鼎身銘刻華神水波紋，鼎器可依涮煮食材厚薄自由升降導熱。
                     </p>
                   </div>
                   <div className="mt-4 p-3 bg-[#0d0c0b] rounded border border-[#252220] flex items-center justify-between text-xs">
@@ -312,7 +312,7 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
                   <div>
                     <span className="text-[11px] font-mono text-[#d49b55]">APP 04 · VIP 會員私享信物</span>
                     <h4 className="font-oriental text-base text-[#f5f1ea] mt-1 mb-2">
-                      赤霄椒金銅鑄名牌
+                      華神椒金銅鑄名牌
                     </h4>
                     <p className="text-xs text-[#9d9385] leading-relaxed">
                       為常客與包廂尊客量身刻製的黑胡桃木與鍛銅名牌，憑卡到店由主廚親自備置隱藏版季節山珍與特調青花椒醬。
@@ -332,14 +332,25 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
         <div className="px-6 py-3 border-t border-[#262220] bg-[#141211] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8e8477]">
           <div className="flex items-center gap-2">
             <Sparkles className="w-3.5 h-3.5 text-[#d49b55]" />
-            <span>赤霄椒宴 · 全套視覺識別與現代東方美學版權所有</span>
+            <span>華神椒宴 HUASHEN · 全套視覺識別與現代東方美學版權所有</span>
           </div>
-          <button
-            onClick={onClose}
-            className="px-4 py-1.5 bg-[#c22b22] hover:bg-[#a9221a] text-white rounded transition-colors font-medium whitespace-nowrap"
-          >
-            關閉手冊
-          </button>
+          <div className="flex items-center gap-2">
+            <a
+              href="/standalone-index.html"
+              download="index.html"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#25201c] hover:bg-[#352e28] text-[#d49b55] hover:text-white border border-[#d49b55]/30 rounded transition-colors font-medium whitespace-nowrap"
+              title="下載單一獨立 index.html 檔案"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>下載 index.html (單一檔案)</span>
+            </a>
+            <button
+              onClick={onClose}
+              className="px-4 py-1.5 bg-[#c22b22] hover:bg-[#a9221a] text-white rounded transition-colors font-medium whitespace-nowrap"
+            >
+              關閉手冊
+            </button>
+          </div>
         </div>
       </div>
     </div>

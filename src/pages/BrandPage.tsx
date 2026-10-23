@@ -86,7 +86,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src="/src/assets/images/hero_mala_hotpot_boiled_fish_1790659165650.jpg"
-            alt="赤霄椒宴麻辣火鍋與水煮魚"
+            alt="華神椒宴 HUASHEN 麻辣火鍋與水煮魚"
             className="w-full h-full object-cover object-center scale-105 filter brightness-70"
             referrerPolicy="no-referrer"
           />
@@ -100,22 +100,22 @@ export const BrandPage: React.FC<BrandPageProps> = ({
           {/* Editorial Kicker */}
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#1a1614]/80 border border-[#d49b55]/40 rounded-full text-xs text-[#d49b55]">
             <Flame className="w-3.5 h-3.5 text-[#c22b22]" />
-            <span className="font-oriental font-medium">現代東方火光美學 · 巴蜀雙絕非遺傳承</span>
+            <span className="font-oriental font-medium">現代東方極致美學 · 巴蜀雙絕經典問鼎</span>
           </div>
 
           {/* Large Hero Brand Emblem & Heading */}
           <div className="space-y-4">
             <h1 className="font-oriental text-4xl sm:text-6xl lg:text-7xl font-bold text-[#f6f4f0] tracking-wider leading-tight text-balance">
-              沸騰川魂 · 赤焰入魂
+              川蜀精髓 · 雙絕並立
             </h1>
             <p className="font-oriental text-xl sm:text-2xl text-[#d49b55] tracking-widest font-medium">
-              漢源鮮椒騰浪 · 百年九宮問鼎
+              漢源鮮椒騰浪 · 百年經典問鼎
             </p>
           </div>
 
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#d8d2c7] leading-relaxed font-light">
-            赤霄·椒宴以當代東方美學重新詮釋川蜀飲食精髓。
-            一端是220度熱油現潑、鮮麻交響的水煮魚；一端是手炒十八道工序、茶油調和的九宮格老火鍋。
+            華神椒宴 HUASHEN 以當代東方美學重新詮釋川蜀飲食精髓。
+            一端是220度熱油現潑、鮮麻交響的水煮魚；一端是手炒十八道工序、茶油調和的麻辣老火鍋。
             雙絕並立，讓滾燙火光在靜謐空間中沸騰綻放。
           </p>
 
@@ -157,7 +157,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
                 <div className="flex items-center gap-2 text-xs">
                   <Flame className="w-4 h-4 text-[#c22b22]" />
                   <span className="font-oriental font-semibold text-[#f5f1ea]">
-                    赤霄川味麻辣階梯測驗
+                    華神川味麻辣階梯測驗
                   </span>
                   <span className="text-[#8e8477]">（點擊切換感官階度）</span>
                 </div>
@@ -214,10 +214,10 @@ export const BrandPage: React.FC<BrandPageProps> = ({
             02 · THE TWIN SICHUAN SPECIALTIES
           </span>
           <h2 className="font-oriental text-3xl sm:text-4xl font-bold text-[#f5f1ea] tracking-wider">
-            雙絕匠心魂 · 沸水與赤焰的東方辯證
+            雙絕匠心· 經典問鼎
           </h2>
           <p className="text-xs sm:text-sm text-[#9d9385] max-w-2xl mx-auto">
-            以水載魚，鮮嫩如緞；以火淬鼎，九宮九溫。赤霄雙絕代表川味飲食的至高境界。
+            以水載魚，鮮嫩如緞；以火淬鼎，現潑沸騰。華神雙絕代表川味飲食的至高境界。
           </p>
         </div>
 
@@ -265,7 +265,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
             </div>
 
             <div className="pt-4 border-t border-[#252220] flex items-center justify-between">
-              <span className="font-mono text-base font-bold text-[#e13b2e]">NT$ 1,280</span>
+              <span className="font-mono text-base font-bold text-[#e13b2e]">NT$ 1,880</span>
               <button
                 onClick={() => onNavigatePage('menu', 'menu-broths')}
                 className="text-xs text-[#d49b55] hover:text-[#f5f1ea] flex items-center gap-1 group font-medium"
@@ -276,13 +276,13 @@ export const BrandPage: React.FC<BrandPageProps> = ({
             </div>
           </div>
 
-          {/* Twin 2: 九宮格老火鍋 */}
+          {/* Twin 2: 麻辣老火鍋 */}
           <div className="p-6 sm:p-8 rounded-xl bg-[#141211] border border-[#2b2623] hover:border-[#d49b55]/40 transition-all flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#332c28]">
                 <img
                   src="/src/assets/images/hero_mala_hotpot_boiled_fish_1790659165650.jpg"
-                  alt="重慶百年古法九宮格牛油麻辣鍋"
+                  alt="重慶百年古法牛油麻辣鍋"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
@@ -294,7 +294,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
               <div>
                 <span className="text-[11px] font-latin-display text-[#d49b55]">SIGNATURE SPECIALTY II</span>
                 <h3 className="font-oriental text-2xl font-bold text-[#f5f1ea] mt-1">
-                  重慶百年古法九宮格牛油老火鍋
+                  重慶百年古法牛油老火鍋
                 </h3>
                 <p className="text-xs text-[#a09688] mt-2 leading-relaxed">
                   九宮之妙，在於「格格不同溫，菜菜各得其所」。中心格沸浪翻滾，最宜七上八下燙鮮毛肚與鴨腸；十字格中火慢煨，適合和牛與排骨入味；四角格微沸溫煮，最宜鴨血與厚豆腐吸汁。老茶油調和純牛油，厚而不膩，辣不上火。
@@ -318,12 +318,12 @@ export const BrandPage: React.FC<BrandPageProps> = ({
             </div>
 
             <div className="pt-4 border-t border-[#252220] flex items-center justify-between">
-              <span className="font-mono text-base font-bold text-[#e13b2e]">NT$ 780</span>
+              <span className="font-mono text-base font-bold text-[#e13b2e]">NT$ 1,280</span>
               <button
                 onClick={() => onNavigatePage('menu', 'menu-broths')}
                 className="text-xs text-[#d49b55] hover:text-[#f5f1ea] flex items-center gap-1 group font-medium"
               >
-                <span>查看九宮格鍋底涮菜技巧</span>
+                <span>查看麻辣鍋底涮菜技巧</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
@@ -338,7 +338,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
                 五味靈魂 · 巴蜀原產地溯源認證
               </h3>
               <p className="text-xs text-[#8e8477]">
-                赤霄恪守正統川味道地食材，所有辣椒與花椒均於川西高山當季直採
+                華神恪守正統川味道地食材，所有辣椒與花椒均於川西高山當季直採
               </p>
             </div>
             <ShieldCheck className="w-6 h-6 text-[#d49b55]" />
@@ -371,7 +371,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
             03 · MODERN ORIENTAL SPATIAL AESTHETICS
           </span>
           <h2 className="font-oriental text-3xl sm:text-4xl font-bold text-[#f5f1ea] tracking-wider">
-            赤焰留香 · 鼎沸火光中的當代雅席
+            香榭頂極 · 溫潤光中的當代雅席
           </h2>
           <p className="text-xs sm:text-sm text-[#9d9385] max-w-2xl mx-auto">
             以黑胡桃木格柵、玄青磚石、鍛造紅銅與溫潤柔光，構築高私密度的東方饗宴場域。
@@ -383,7 +383,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
           <div className="aspect-[16/9] sm:aspect-[21/9] w-full">
             <img
               src="/src/assets/images/interior_oriental_dining_ambiance_1790659204028.jpg"
-              alt="赤霄椒宴東方美學空間"
+              alt="華神椒宴 HUASHEN 東方美學空間"
               className="w-full h-full object-cover filter brightness-85"
               referrerPolicy="no-referrer"
             />
@@ -392,10 +392,10 @@ export const BrandPage: React.FC<BrandPageProps> = ({
             <div className="max-w-2xl space-y-2">
               <span className="text-xs font-mono text-[#d49b55]">SPATIAL PHILOSOPHY</span>
               <h3 className="font-oriental text-2xl sm:text-3xl font-bold text-[#f5f1ea]">
-                火光在眼前沸騰，美味在席間盡興綻放
+                美味在席間盡興綻放
               </h3>
               <p className="text-xs sm:text-sm text-[#c8c1b5] leading-relaxed">
-                全店配備高效下吸式無煙排風系統，全天候保持空氣清新循環，餐畢衣物清新不留異味。每席之間以典雅屏風格柵借景借光，兼顧私密對話與開闊視野。
+                全天候保持空氣清新循環，餐畢衣物清新不留異味。每席之間區隔有致，兼顧私密對話與開闊視野。
               </p>
             </div>
           </div>
@@ -411,10 +411,10 @@ export const BrandPage: React.FC<BrandPageProps> = ({
                 <span className="text-xs text-[#8c8273]">適合 2 - 4 人</span>
               </div>
               <h4 className="font-oriental text-xl font-bold text-[#f5f1ea]">
-                「赤霄水榭」大廳散席
+                「凝香雅緻」獨立雅座
               </h4>
               <p className="text-xs text-[#9d9385] leading-relaxed">
-                竹影掩映與石臼流水造景旁，感受周圍熱鬧鼎沸的火鍋煙火氣。桌間距保持1.8米以上，自在暢談無壓迫。
+                特設獨立雅座，感受冷麻的火鍋凝香。桌間距保持1.8米以上，自在暢談無壓迫。
               </p>
             </div>
             <button
@@ -424,7 +424,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
               }}
               className="w-full py-2.5 bg-[#1f1b19] hover:bg-[#c22b22] text-[#e5e0d8] hover:text-white text-xs font-medium rounded transition-colors border border-[#352f2b] hover:border-transparent flex items-center justify-center gap-1.5"
             >
-              <span>預約水榭大廳席位</span>
+              <span>預約獨立雅座</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
@@ -440,7 +440,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
                 「椒蘭香榭」景觀雅座
               </h4>
               <p className="text-xs text-[#9d9385] leading-relaxed">
-                高樓臨窗半開放卡座，俯瞰信義繁華璀璨夜景。高椅背皮革屏風包覆，兼具開闊天際線與私密聚會氛圍。
+                臨窗半開放卡座，靜觀市區靜巷繁華璀璨夜景。高椅背皮革屏風包覆，兼具開闊天際線與私密聚會氛圍。
               </p>
             </div>
             <button

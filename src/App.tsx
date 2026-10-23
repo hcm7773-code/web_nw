@@ -32,7 +32,7 @@ export default function App() {
     email: '',
     spiceTolerance: '正宗巴蜀',
     specialRequests: '',
-    preSelectedPot: '漢源貢椒沸騰現片黑魚 (NT$ 1,280)',
+    preSelectedPot: '漢源貢椒沸騰現片黑魚 (NT$ 1,880)',
     confirmed: false,
     bookingCode: '',
   });

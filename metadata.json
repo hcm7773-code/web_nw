@@ -1,6 +1,6 @@
 {
-  "name": "赤霄椒宴 CHIXIAO - 現代東方麻辣火鍋與水煮魚",
-  "description": "赤霄椒宴品牌旗艦官網與視覺識別系統，演繹現代東方美學與熱辣沸騰之味。呈獻正宗重慶九宮格麻辣火鍋、漢源花椒現潑水煮魚，提供典藏菜單、線上訂位與外帶外送點餐服務。",
+  "name": "華神椒宴 HUASHEN - 現代東方麻辣火鍋與水煮魚",
+  "description": "華神椒宴品牌旗艦官網與視覺識別系統，演繹現代東方美學與熱辣沸騰之味。呈獻正宗重慶九宮格麻辣火鍋、漢源花椒現潑水煮魚，提供典藏菜單、線上訂位與外帶外送點餐服務。",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
