@@ -86,7 +86,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src="/src/assets/images/hero_mala_hotpot_boiled_fish_1790659165650.jpg"
-            alt="華神椒宴 HUASHEN 麻辣火鍋與水煮魚"
+            alt="華神·椒麻 極致饗宴 麻辣火鍋與水煮魚"
             className="w-full h-full object-cover object-center scale-105 filter brightness-70"
             referrerPolicy="no-referrer"
           />
@@ -114,7 +114,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
           </div>
 
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#d8d2c7] leading-relaxed font-light">
-            華神椒宴 HUASHEN 以當代東方美學重新詮釋川蜀飲食精髓。
+            華神·椒麻 極致饗宴以當代東方美學重新詮釋川蜀飲食精髓。
             一端是220度熱油現潑、鮮麻交響的水煮魚；一端是手炒十八道工序、茶油調和的麻辣老火鍋。
             雙絕並立，讓滾燙火光在靜謐空間中沸騰綻放。
           </p>
@@ -383,7 +383,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
           <div className="aspect-[16/9] sm:aspect-[21/9] w-full">
             <img
               src="/src/assets/images/interior_oriental_dining_ambiance_1790659204028.jpg"
-              alt="華神椒宴 HUASHEN 東方美學空間"
+              alt="華神·椒麻 極致饗宴 東方美學空間"
               className="w-full h-full object-cover filter brightness-85"
               referrerPolicy="no-referrer"
             />
@@ -440,7 +440,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
                 「椒蘭香榭」景觀雅座
               </h4>
               <p className="text-xs text-[#9d9385] leading-relaxed">
-                臨窗半開放卡座，靜觀市區靜巷繁華璀璨夜景。高椅背皮革屏風包覆，兼具開闊天際線與私密聚會氛圍。
+                臨窗半開放卡座，靜觀台北西門鬧區靜巷繁華璀璨夜景。高椅背皮革屏風包覆，兼具開闊天際線與私密聚會氛圍。
               </p>
             </div>
             <button

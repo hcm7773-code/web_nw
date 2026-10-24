@@ -8,7 +8,10 @@ interface FooterProps {
   onOpenVis: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigatePage, onOpenVis }) => {
+export const Footer: React.FC<FooterProps> = ({
+  onNavigatePage,
+  onOpenVis,
+}) => {
   return (
     <footer className="bg-[#0b0a09] border-t border-[#24201e] text-[#9c9183] text-xs pt-12 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -152,7 +155,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigatePage, onOpenVis }) => 
         {/* Quiet Bottom Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-[#6d6356]">
           <div>
-            © 2026 華神椒宴 HUASHEN. 保留一切權利。
+            © 2026 華神·椒麻 極致饗宴. 保留一切權利。
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Copy, Check, Sparkles, Compass, Palette, Type, Layers, Download } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 
@@ -10,6 +10,15 @@ interface VisModalProps {
 export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
   const [copiedColor, setCopiedColor] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'logo' | 'colors' | 'type' | 'applications'>('logo');
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -63,15 +72,21 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md animate-fade-in">
-      <div className="relative w-full max-w-4xl max-h-[90vh] bg-[#141211] border border-[#d49b55]/30 rounded-xl shadow-2xl flex flex-col overflow-hidden text-[#e5e0d8]">
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md animate-fade-in"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-4xl max-h-[90vh] bg-[#141211] border border-[#d49b55]/30 rounded-xl shadow-2xl flex flex-col overflow-hidden text-[#e5e0d8]"
+      >
         {/* Modal Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#2d2825] bg-[#181614]">
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-[#c22b22] animate-pulse" />
             <div>
               <h2 className="text-lg font-oriental font-bold tracking-wider text-[#f5f1ea]">
-                華神椒宴 HUASHEN VIS 品牌視覺識別手冊
+                華神·椒麻 極致饗宴 VIS 品牌視覺識別手冊
               </h2>
               <p className="text-xs text-[#9d9385] font-latin-display">
                 VISUAL IDENTITY SYSTEM & BRAND DESIGN CONSTITUTION
@@ -332,7 +347,7 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
         <div className="px-6 py-3 border-t border-[#262220] bg-[#141211] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8e8477]">
           <div className="flex items-center gap-2">
             <Sparkles className="w-3.5 h-3.5 text-[#d49b55]" />
-            <span>華神椒宴 HUASHEN · 全套視覺識別與現代東方美學版權所有</span>
+            <span>華神·椒麻 極致饗宴 · 全套視覺識別與現代東方美學版權所有</span>
           </div>
           <div className="flex items-center gap-2">
             <a

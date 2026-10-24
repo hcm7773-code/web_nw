@@ -410,7 +410,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({
                             {rec.whyItPairs}
                           </p>
                           <div className="font-mono text-xs font-bold text-[#e13b2e]">
-                            NT$ {dish.price}
+                            NT$ {dish.price.toLocaleString()}
                           </div>
                         </div>
                       </div>
@@ -463,7 +463,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({
                             {rec.whyItPairs}
                           </p>
                           <div className="font-mono text-xs font-bold text-[#e13b2e]">
-                            NT$ {dish.price}
+                            NT$ {dish.price.toLocaleString()}
                           </div>
                         </div>
                       </div>
@@ -601,7 +601,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({
                       {item.subtitle}
                     </span>
                     <span className="font-mono text-base font-bold text-[#e13b2e]">
-                      NT$ {item.price}
+                      NT$ {item.price.toLocaleString()}
                     </span>
                   </div>
                   <h3 className="font-oriental text-lg font-bold text-[#f5f1ea] mt-0.5">
@@ -672,7 +672,7 @@ export const MenuPage: React.FC<MenuPageProps> = ({
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-latin-display text-[#d49b55]">ELIXIR</span>
                   <span className="font-mono text-base font-bold text-[#e13b2e]">
-                    NT$ {drink.price}
+                    NT$ {drink.price.toLocaleString()}
                   </span>
                 </div>
                 <h3 className="font-oriental text-lg font-bold text-[#f5f1ea]">

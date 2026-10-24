@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Plus, Minus, Trash2, ShoppingBag, ArrowRight, CheckCircle2, Clock, MapPin, Sparkles } from 'lucide-react';
 import { CartItem } from '../types';
 
@@ -32,6 +32,15 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
   const [orderId, setOrderId] = useState('');
   const [formError, setFormError] = useState<string | null>(null);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   const subtotal = cart.reduce((sum, item) => sum + item.item.price * item.quantity, 0);
@@ -50,7 +59,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
       setFormError('請填寫外送地址');
       return;
     }
-    const generatedId = `CX-ORDER-${Date.now().toString().slice(-6)}`;
+    const generatedId = `HS-ORDER-${Date.now().toString().slice(-6)}`;
     setOrderId(generatedId);
     setOrderConfirmed(true);
   };
@@ -63,9 +72,15 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden bg-black/80 backdrop-blur-sm animate-fade-in">
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 overflow-hidden bg-black/80 backdrop-blur-sm animate-fade-in"
+    >
       <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#131110] border-l border-[#2e2926] shadow-2xl flex flex-col text-[#e5e0d8]">
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="w-screen max-w-md bg-[#131110] border-l border-[#2e2926] shadow-2xl flex flex-col text-[#e5e0d8]"
+        >
           {/* Drawer Header */}
           <div className="p-5 border-b border-[#252220] flex items-center justify-between bg-[#171514]">
             <div className="flex items-center gap-2">
@@ -166,7 +181,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                         : 'text-[#8c8273] hover:text-[#f5f1ea]'
                     }`}
                   >
-                    到店自取 (市區靜巷旗艦店)
+                    到店自取 (台北西門旗艦店)
                   </button>
                   <button
                     type="button"

@@ -114,7 +114,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
           <span
             className={`font-oriental font-bold text-[#f5f1ea] tracking-wider leading-none ${textSizes[size]}`}
           >
-            華神椒宴
+            華神<span className="text-[#d49b55] mx-1">·</span>椒麻
           </span>
           {showSeal && (
             <span className="hidden sm:inline-block border border-[#c22b22] text-[#e13b2e] bg-[#c22b22]/10 px-1 py-0.2 text-[10px] font-oriental tracking-widest rounded-xs scale-90">
@@ -125,9 +125,9 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
         {showSubtitle && (
           <span
-            className={`font-latin-display text-[#d49b55] font-semibold mt-0.5 tracking-[0.25em] ${subtextSizes[size]}`}
+            className={`font-oriental text-[#d49b55] font-semibold mt-0.5 tracking-widest ${subtextSizes[size]}`}
           >
-            HUASHEN
+            極致饗宴
           </span>
         )}
       </div>

@@ -13,7 +13,7 @@ import {
   Gift,
   HelpCircle,
 } from 'lucide-react';
-import { AppPage, BlockId, ReservationState } from '../types';
+import { AppPage, BlockId, ReservationState, MenuItem } from '../types';
 import { SET_MENUS } from '../data/menuData';
 
 interface ExperiencePageProps {
@@ -22,6 +22,7 @@ interface ExperiencePageProps {
   onConfirmReservation: () => void;
   onOpenCart: () => void;
   onNavigatePage: (page: AppPage, targetBlock?: BlockId) => void;
+  onAddToCart?: (item: MenuItem, spiciness: string, numbing: string) => void;
 }
 
 export const ExperiencePage: React.FC<ExperiencePageProps> = ({
@@ -30,6 +31,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
   onConfirmReservation,
   onOpenCart,
   onNavigatePage,
+  onAddToCart,
 }) => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const [bookingError, setBookingError] = useState<string | null>(null);
@@ -45,7 +47,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
     {
       id: 'window',
       title: '「椒蘭香榭」臨窗景觀雅座',
-      suitable: '4 - 6 人 · 市區靜巷夜景天際線',
+      suitable: '4 - 6 人 · 台北西門鬧區靜巷繁華璀璨夜景',
       desc: '靜謐璀璨夜色，高背沙發半包廂隔屏，適合情侶約會與家庭團聚。',
     },
     {
@@ -59,7 +61,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
   const faqs = [
     {
       q: '現場有提供不辣的鍋底嗎？不吃牛油可以吃水煮魚嗎？',
-      a: '有的！我們備有雲南野生羊肚菌熬製之「古法酸菜魚金湯鍋」，亦可點選清香清甜之「山泉鱸魚藤椒水煮（可調為免辣清蒸藤椒風味）」。火鍋亦備有純茶油熬煮的無牛油高湯。',
+      a: '有的！我們備有野生蕈菇熬製之「滋補野蕈古法酸菜魚金湯鍋」，亦可點選清香清甜之「山泉鱸魚藤椒水煮（可調為免辣清蒸藤椒風味）」。火鍋亦備有純茶油熬煮的無牛油高湯。',
     },
     {
       q: '線上訂位需要支付訂金嗎？包廂有低消限制嗎？',
@@ -71,7 +73,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
     },
     {
       q: '門市有配合停車優惠與代客泊車服務嗎？',
-      a: '市區靜巷旗艦店不提供泊車服務。',
+      a: '台北西門旗艦店與概念西門店鄰近峨眉立體停車場與洛陽立體停車場（步行約3分鐘），持當日用餐發票可至櫃台洽詢特約停車折抵禮遇。',
     },
   ];
 
@@ -96,7 +98,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
           預約與鑑賞 · 席位與外帶整合
         </h1>
         <p className="text-xs sm:text-sm text-[#9d9385] max-w-xl mx-auto leading-relaxed">
-          線上即刻尊榮留席，提前指定沸騰水煮魚與麻辣老火鍋；或選擇專人外帶外送，將華神椒宴極致饗宴帶回家中。
+          線上即刻尊榮留席，提前指定沸騰水煮魚與麻辣老火鍋；或選擇專人外帶外送，將華神·椒麻 極致饗宴帶回家中。
         </p>
       </section>
 
@@ -139,7 +141,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
               <div className="max-w-lg mx-auto p-6 rounded-xl bg-gradient-to-b from-[#1c1917] to-[#121110] border border-[#d49b55]/40 text-left space-y-4 shadow-xl">
                 <div className="flex items-center justify-between border-b border-[#2d2825] pb-3">
                   <span className="font-oriental text-sm font-bold text-[#f5f1ea]">
-                    華神椒宴 HUASHEN 席位尊榮憑證
+                    華神·椒麻 極致饗宴 席位尊榮憑證
                   </span>
                   <span className="font-mono text-xs font-bold text-[#d49b55]">
                     {reservationState.bookingCode}
@@ -217,6 +219,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
                   </label>
                   <input
                     type="date"
+                    min={new Date().toISOString().split('T')[0]}
                     value={reservationState.date}
                     onChange={(e) => onUpdateReservation({ date: e.target.value })}
                     className="w-full px-3 py-2.5 bg-[#1b1816] border border-[#352f2b] rounded text-xs text-[#f5f1ea] focus:border-[#c22b22] outline-none"
@@ -331,19 +334,22 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
                   >
                     <option value="">到店現場點餐</option>
                     <option value="漢源貢椒沸騰現片黑魚 (NT$ 1,880)">
-                      漢源貢椒沸騰現片黑魚（鮮活現片）
+                      漢源貢椒沸騰現片黑魚（鮮活現片 · NT$ 1,880）
                     </option>
                     <option value="山泉鱸魚藤椒青花椒水煮 (NT$ 1,380)">
-                      山泉鱸魚藤椒青花椒水煮（清亮鮮麻）
+                      山泉鱸魚藤椒青花椒水煮（清亮鮮麻 · NT$ 1,380）
                     </option>
-                    <option value="重慶百年古法老茶油鍋 (NT$ 1,280)">
-                      重慶百年古法牛油老火鍋
+                    <option value="重慶百年古法牛油麻辣鍋 (NT$ 1,280)">
+                      重慶百年古法牛油麻辣鍋（百年秘方 · NT$ 1,280）
                     </option>
-                    <option value="水火共濟太極鴛鴦雙拼鍋 (NT$ 880)">
-                      水火共濟鴛鴦鍋（麻辣老火鍋 + 古法酸菜魚金湯）
+                    <option value="滋補野蕈古法酸菜魚金湯鍋 (NT$ 980)">
+                      滋補野蕈古法酸菜魚金湯鍋（溫補鮮甜 · NT$ 980）
                     </option>
                     <option value="雙人椒香沸騰經典饗宴 (NT$ 2,380)">
-                      雙人椒香沸騰經典饗宴（套餐）
+                      雙人椒香沸騰經典饗宴（套餐 · NT$ 2,380）
+                    </option>
+                    <option value="四人經典鼎沸尊榮盛宴 (NT$ 4,680)">
+                      四人經典鼎沸尊榮盛宴（套餐 · NT$ 4,680）
                     </option>
                   </select>
                 </div>
@@ -506,12 +512,31 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
                     {set.description}
                   </div>
                   <div className="font-mono text-sm font-bold text-[#e13b2e] mt-1">
-                    NT$ {set.price}
+                    NT$ {set.price.toLocaleString()}
                   </div>
                 </div>
                 <button
-                  onClick={onOpenCart}
-                  className="px-3.5 py-1.5 bg-[#252220] hover:bg-[#c22b22] text-[#e5e0d8] hover:text-white text-xs font-medium rounded transition-colors whitespace-nowrap"
+                  onClick={() => {
+                    if (onAddToCart) {
+                      onAddToCart(
+                        {
+                          id: set.id,
+                          name: set.name,
+                          subtitle: set.subtitle,
+                          category: 'broth',
+                          price: set.price,
+                          description: set.description,
+                          spiciness: 3,
+                          numbing: 3,
+                          tags: set.tags,
+                        },
+                        '正宗巴蜀辣',
+                        '標準青花椒麻'
+                      );
+                    }
+                    onOpenCart();
+                  }}
+                  className="px-3.5 py-1.5 bg-[#252220] hover:bg-[#c22b22] text-[#e5e0d8] hover:text-white text-xs font-medium rounded transition-colors whitespace-nowrap cursor-pointer"
                 >
                   外帶選購
                 </button>
@@ -543,11 +568,11 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
           <div className="p-6 sm:p-8 rounded-xl bg-[#141211] border border-[#2b2623] space-y-5">
             <div className="flex items-center justify-between">
               <span className="text-xs font-mono text-[#c22b22]">FLAGSHIP STORE</span>
-              <span className="text-xs text-[#d49b55] font-oriental">市區靜巷雅緻夜景</span>
+              <span className="text-xs text-[#d49b55] font-oriental">台北西門鬧區靜巷雅緻夜景</span>
             </div>
             <div>
               <h3 className="font-oriental text-2xl font-bold text-[#f5f1ea]">
-                華神椒宴 市區靜巷旗艦店
+                華神·椒麻 台北西門旗艦店
               </h3>
               <p className="text-xs text-[#9d9385] mt-1">
                 景觀雅席 · 近觀璀璨台北夜景
@@ -565,9 +590,9 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
               <span>設有靜謐空間雅座 · 專屬侍餐茶席</span>
               <button
                 onClick={() => {
-                  window.scrollTo({ top: 300, behavior: 'smooth' });
+                  document.getElementById('exp-booking')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-[#d49b55] hover:underline"
+                className="text-[#d49b55] hover:underline cursor-pointer"
               >
                 即刻預約此店 →
               </button>
@@ -582,7 +607,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
             </div>
             <div>
               <h3 className="font-oriental text-2xl font-bold text-[#f5f1ea]">
-                華神椒宴 概念西門店
+                華神·椒麻 概念西門店
               </h3>
               <p className="text-xs text-[#9d9385] mt-1">
                 西門幽靜隱密巷弄 · 私密廚房獨立水榭包廂
@@ -600,9 +625,9 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
               <span>靜巷景觀 · 私密品茗雅座</span>
               <button
                 onClick={() => {
-                  window.scrollTo({ top: 300, behavior: 'smooth' });
+                  document.getElementById('exp-booking')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-[#d49b55] hover:underline"
+                className="text-[#d49b55] hover:underline cursor-pointer"
               >
                 即刻預約此店 →
               </button>

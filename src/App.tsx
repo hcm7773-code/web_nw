@@ -14,6 +14,18 @@ export default function App() {
   const [isVisOpen, setIsVisOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
+  // Clean up any lingering light theme class
+  useEffect(() => {
+    document.documentElement.classList.remove('light');
+    document.documentElement.classList.remove('dark');
+    document.documentElement.removeAttribute('data-theme');
+    try {
+      localStorage.removeItem('huashen_theme');
+    } catch {
+      // ignore
+    }
+  }, []);
+
   // Cart state
   const [cart, setCart] = useState<CartItem[]>([]);
 
@@ -136,7 +148,7 @@ export default function App() {
   };
 
   const handleConfirmReservation = () => {
-    const bookingCode = `CX-${new Date().getFullYear()}${String(new Date().getMonth() + 1).padStart(2, '0')}-${Math.floor(1000 + Math.random() * 9000)}`;
+    const bookingCode = `HS-${new Date().getFullYear()}${String(new Date().getMonth() + 1).padStart(2, '0')}-${Math.floor(1000 + Math.random() * 9000)}`;
     setReservationState((prev) => ({
       ...prev,
       confirmed: true,
@@ -199,6 +211,7 @@ export default function App() {
             onConfirmReservation={handleConfirmReservation}
             onOpenCart={() => setIsCartOpen(true)}
             onNavigatePage={handleNavigatePage}
+            onAddToCart={handleAddToCart}
           />
         )}
       </main>
