@@ -610,7 +610,7 @@ export const ExperiencePage: React.FC<ExperiencePageProps> = ({
                 華神·椒麻 概念西門店
               </h3>
               <p className="text-xs text-[#9d9385] mt-1">
-                西門幽靜隱密巷弄 · 私密廚房獨立水榭包廂
+                西門幽靜隱密巷弄 · 私密廚房·獨立雅座/包廂
               </p>
             </div>
 

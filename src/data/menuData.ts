@@ -1,4 +1,5 @@
 import { MenuItem } from '../types';
+import { BRAND_IMAGES } from '../assets/images';
 
 export const MENU_ITEMS: MenuItem[] = [
   // Block 1: 湯底與沸騰活魚
@@ -13,7 +14,7 @@ export const MENU_ITEMS: MenuItem[] = [
     numbing: 4,
     tags: ['鎮店絕品', '現撈活魚', '熱油現潑'],
     pairingAdvice: '建議搭配老樹桂花酸梅湯，生津化油，解麻提鮮。',
-    image: '/src/assets/images/dish_boiled_fish_peppercorn_1790659179520.jpg',
+    image: BRAND_IMAGES.boiledFish,
     isSignature: true,
   },
   {
@@ -40,7 +41,7 @@ export const MENU_ITEMS: MenuItem[] = [
     numbing: 3,
     tags: ['百年秘方', '純天然牛油', '古法老茶油'],
     pairingAdvice: '正宗四川香油蒜泥味碟搭配，降溫附香護胃。',
-    image: '/src/assets/images/hero_mala_hotpot_boiled_fish_1790659165650.jpg',
+    image: BRAND_IMAGES.hero,
     isSignature: true,
   },
   {
@@ -67,7 +68,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spiciness: 0,
     numbing: 0,
     tags: ['日本產地直送', 'A5霜降極品'],
-    image: '/src/assets/images/dish_mala_hotpot_ingredients_1790659193659.jpg',
+    image: BRAND_IMAGES.ingredients,
     isSignature: true,
   },
   {

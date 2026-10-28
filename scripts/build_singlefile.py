@@ -26,7 +26,7 @@ def build_single_file_html():
         with open(js_file, 'r', encoding='utf-8') as f:
             js_content += f.read() + '\n'
 
-    # Read and encode images
+    # Read and encode images from src and dist/assets
     img_dir = 'src/assets/images'
     image_replacements = {}
     if os.path.exists(img_dir):
@@ -38,17 +38,33 @@ def build_single_file_html():
                 with open(full_img_path, 'rb') as img_f:
                     b64_data = base64.b64encode(img_f.read()).decode('utf-8')
                     data_uri = f'data:{mime};base64,{b64_data}'
-                    # We can replace both the /src/assets/images/path and /assets/path
                     image_replacements[f'/src/assets/images/{img_name}'] = data_uri
                     image_replacements[f'src/assets/images/{img_name}'] = data_uri
                     image_replacements[f'./src/assets/images/{img_name}'] = data_uri
                     image_replacements[img_name] = data_uri
 
+    # Also map hashed assets from dist/assets
+    if os.path.exists('dist/assets'):
+        for asset_name in os.listdir('dist/assets'):
+            if asset_name.endswith(('.jpg', '.png', '.jpeg', '.webp')):
+                full_asset_path = os.path.join('dist/assets', asset_name)
+                ext = asset_name.split('.')[-1].lower()
+                mime = 'image/jpeg' if ext in ['jpg', 'jpeg'] else f'image/{ext}'
+                with open(full_asset_path, 'rb') as img_f:
+                    b64_data = base64.b64encode(img_f.read()).decode('utf-8')
+                    data_uri = f'data:{mime};base64,{b64_data}'
+                    image_replacements[f'new URL(`{asset_name}`,import.meta.url).href'] = f'"{data_uri}"'
+                    image_replacements[f'new URL("{asset_name}",import.meta.url).href'] = f'"{data_uri}"'
+                    image_replacements[f'new URL(\'{asset_name}\',import.meta.url).href'] = f'"{data_uri}"'
+                    image_replacements[f'new URL(`./{asset_name}`,import.meta.url).href'] = f'"{data_uri}"'
+                    image_replacements[f'./assets/{asset_name}'] = data_uri
+                    image_replacements[f'assets/{asset_name}'] = data_uri
+                    image_replacements[f'/assets/{asset_name}'] = data_uri
+
     # Replace image paths in JS and CSS
     for orig, data_uri in image_replacements.items():
-        if orig.startswith('/'):
-            js_content = js_content.replace(orig, data_uri)
-            css_content = css_content.replace(orig, data_uri)
+        js_content = js_content.replace(orig, data_uri)
+        css_content = css_content.replace(orig, data_uri)
 
     # Remove external stylesheet link and replace with inline <style>
     html = re.sub(r'<link\s+rel="stylesheet"[^>]+>', '', html)

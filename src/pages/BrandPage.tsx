@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Flame, Droplets, Sparkles, UtensilsCrossed, Calendar, Check, Compass, ShieldCheck } from 'lucide-react';
 import { AppPage, BlockId } from '../types';
 import { BrandLogo } from '../components/BrandLogo';
+import { BRAND_IMAGES } from '../assets/images';
 
 interface BrandPageProps {
   onNavigatePage: (page: AppPage, targetBlock?: BlockId) => void;
@@ -85,7 +86,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
         {/* Background visual with subtle contrast scrim */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
-            src="/src/assets/images/hero_mala_hotpot_boiled_fish_1790659165650.jpg"
+            src={BRAND_IMAGES.hero}
             alt="華神·椒麻 極致饗宴 麻辣火鍋與水煮魚"
             className="w-full h-full object-cover object-center scale-105 filter brightness-70"
             referrerPolicy="no-referrer"
@@ -228,7 +229,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
             <div className="space-y-4">
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#332c28]">
                 <img
-                  src="/src/assets/images/dish_boiled_fish_peppercorn_1790659179520.jpg"
+                  src={BRAND_IMAGES.boiledFish}
                   alt="漢源花椒現潑沸騰水煮魚"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -281,7 +282,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
             <div className="space-y-4">
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-[#332c28]">
                 <img
-                  src="/src/assets/images/hero_mala_hotpot_boiled_fish_1790659165650.jpg"
+                  src={BRAND_IMAGES.hero}
                   alt="重慶百年古法牛油麻辣鍋"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -382,7 +383,7 @@ export const BrandPage: React.FC<BrandPageProps> = ({
         <div className="relative rounded-2xl overflow-hidden border border-[#2f2926] shadow-2xl">
           <div className="aspect-[16/9] sm:aspect-[21/9] w-full">
             <img
-              src="/src/assets/images/interior_oriental_dining_ambiance_1790659204028.jpg"
+              src={BRAND_IMAGES.interior}
               alt="華神·椒麻 極致饗宴 東方美學空間"
               className="w-full h-full object-cover filter brightness-85"
               referrerPolicy="no-referrer"
