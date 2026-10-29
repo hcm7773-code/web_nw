@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Copy, Check, Sparkles, Compass, Palette, Type, Layers, Download } from 'lucide-react';
+import { X, Copy, Check, Sparkles, Compass, Palette, Type, Layers } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 
 interface VisModalProps {
@@ -350,15 +350,6 @@ export const VisModal: React.FC<VisModalProps> = ({ isOpen, onClose }) => {
             <span>華神·椒麻 極致饗宴 · 全套視覺識別與現代東方美學版權所有</span>
           </div>
           <div className="flex items-center gap-2">
-            <a
-              href="/standalone-index.html"
-              download="index.html"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#25201c] hover:bg-[#352e28] text-[#d49b55] hover:text-white border border-[#d49b55]/30 rounded transition-colors font-medium whitespace-nowrap"
-              title="下載單一獨立 index.html 檔案"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>下載 index.html (單一檔案)</span>
-            </a>
             <button
               onClick={onClose}
               className="px-4 py-1.5 bg-[#c22b22] hover:bg-[#a9221a] text-white rounded transition-colors font-medium whitespace-nowrap"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, Sparkles, Download } from 'lucide-react';
+import { Clock, Sparkles } from 'lucide-react';
 import { AppPage, BlockId } from '../types';
 import { BrandLogo } from './BrandLogo';
 
@@ -30,19 +30,6 @@ export const Footer: React.FC<FooterProps> = ({
                 <Sparkles className="w-3.5 h-3.5 text-[#c22b22]" />
                 <span>檢視品牌 VIS 視覺識別系統</span>
               </button>
-
-              <a
-                href="/standalone-index.html"
-                download="index.html"
-                className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#1b1715] hover:bg-[#c22b22] text-[#d49b55] hover:text-white border border-[#d49b55]/30 hover:border-transparent rounded text-xs transition-colors w-fit group mt-1"
-                title="下載單一獨立 index.html 檔案（含完整響應式佈局）"
-              >
-                <Download className="w-3.5 h-3.5 text-[#d49b55] group-hover:text-white" />
-                <span className="font-oriental">下載 index.html (單一檔案)</span>
-              </a>
-              <span className="text-[10px] text-[#635a4f]">
-                完整打包於單一檔案，完美實現響應式佈局 (RWD)
-              </span>
             </div>
           </div>
 
